@@ -8,22 +8,37 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="294.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaCalcController">
    <children>
-      <TextField fx:id="txfNumero1" alignment="CENTER" layoutX="72.0" layoutY="33.0" prefHeight="40.0" prefWidth="150.0" promptText="Digite um número">
+      <TextField fx:id="txfNumero1" alignment="CENTER" layoutX="46.0" layoutY="30.0" prefHeight="40.0" prefWidth="200.0" promptText="Digite um número">
          <font>
             <Font name="Arial Unicode MS" size="12.0" />
          </font>
       </TextField>
-      <TextField fx:id="txfNumero2" alignment="CENTER" layoutX="72.0" layoutY="93.0" prefHeight="40.0" prefWidth="150.0" promptText="Digite outro número" />
-      <Button fx:id="btSomar" contentDisplay="CENTER" layoutX="72.0" layoutY="216.0" mnemonicParsing="false" onAction="#onSomarValores" prefHeight="26.0" prefWidth="65.0" text="Somar" textAlignment="CENTER">
+      <TextField fx:id="txfNumero2" alignment="CENTER" layoutX="46.0" layoutY="90.0" prefHeight="40.0" prefWidth="200.0" promptText="Digite outro número" />
+      <Button fx:id="btSomar" contentDisplay="CENTER" layoutX="46.0" layoutY="200.0" mnemonicParsing="false" onAction="#onSomar" prefHeight="26.0" prefWidth="80.0" text="Soma" textAlignment="CENTER">
          <font>
-            <Font name="Arial Unicode MS" size="12.0" />
+            <Font name="Arial Unicode MS" size="10.0" />
          </font>
       </Button>
-      <Label fx:id="lblResultado" alignment="CENTER" layoutX="72.0" layoutY="163.0" prefHeight="20.0" prefWidth="150.0" textAlignment="CENTER">
+      <Label fx:id="lblResultado" alignment="CENTER" layoutX="46.0" layoutY="150.0" prefHeight="26.0" prefWidth="202.0" textAlignment="CENTER">
          <font>
             <Font name="Arial Unicode MS" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="btLimpar" layoutX="157.0" layoutY="216.0" mnemonicParsing="false" onAction="#onLimparResultado" prefHeight="26.0" prefWidth="65.0" text="Limpar" textAlignment="CENTER" />
+      <Button fx:id="btLimpar" layoutX="67.0" layoutY="287.0" mnemonicParsing="false" onAction="#onLimparResultado" prefHeight="30.0" prefWidth="159.0" text="Limpar" textAlignment="CENTER" />
+      <Button fx:id="btMultiplicacao" contentDisplay="CENTER" layoutX="46.0" layoutY="240.0" mnemonicParsing="false" onAction="#onMultiplicar" prefHeight="26.0" prefWidth="80.0" text="Multiplicação" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Unicode MS" size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="btDivisao" contentDisplay="CENTER" layoutX="166.0" layoutY="240.0" mnemonicParsing="false" onAction="#onDividir" prefHeight="26.0" prefWidth="80.0" text="Divisão" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Unicode MS" size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="btSubtracao" contentDisplay="CENTER" layoutX="166.0" layoutY="200.0" mnemonicParsing="false" onAction="#onSubtrair" prefHeight="26.0" prefWidth="80.0" text="Subtração" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Unicode MS" size="10.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
