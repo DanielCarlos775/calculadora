@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="294.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaCalcController">
+   <children>
+      <TextField fx:id="txfNumero1" alignment="CENTER" layoutX="72.0" layoutY="33.0" prefHeight="40.0" prefWidth="150.0" promptText="Digite um número">
+         <font>
+            <Font name="Arial Unicode MS" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txfNumero2" alignment="CENTER" layoutX="72.0" layoutY="93.0" prefHeight="40.0" prefWidth="150.0" promptText="Digite outro número" />
+      <Button fx:id="btSomar" contentDisplay="CENTER" layoutX="72.0" layoutY="216.0" mnemonicParsing="false" onAction="#onSomarValores" prefHeight="26.0" prefWidth="65.0" text="Somar" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Unicode MS" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblResultado" alignment="CENTER" layoutX="72.0" layoutY="163.0" prefHeight="20.0" prefWidth="150.0" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Unicode MS" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btLimpar" layoutX="157.0" layoutY="216.0" mnemonicParsing="false" onAction="#onLimparResultado" prefHeight="26.0" prefWidth="65.0" text="Limpar" textAlignment="CENTER" />
+   </children>
+</AnchorPane>
