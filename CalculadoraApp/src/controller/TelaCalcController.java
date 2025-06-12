@@ -17,19 +17,72 @@ public class TelaCalcController {
 	private Button btSomar;
 	
 	@FXML
+	private Button btSubtracao;
+	
+	@FXML
+	private Button btMultiplicacao;
+	
+	@FXML
+	private Button btDivisao;
+	
+	@FXML
 	private Button btLimpar;
 	
 	@FXML
 	private Label lblResultado;
 	
 	@FXML
-	private void onSomarValores() {
+	private void onSomar() {
 		try {
 			double numero1 = Double.parseDouble(txfNumero1.getText());
 			double numero2 = Double.parseDouble(txfNumero2.getText());
 			double resultado = numero1 + numero2;
 			
-			lblResultado.setText("Resultado :" + resultado);
+			lblResultado.setText(String.format("Resultado: %.2f", resultado));
+		} catch (NumberFormatException e) {
+			lblResultado.setText("Digite Números Válidos");
+		}
+	}
+	
+	@FXML
+	private void onSubtrair() {
+		try {
+			double numero1 = Double.parseDouble(txfNumero1.getText());
+			double numero2 = Double.parseDouble(txfNumero2.getText());
+			double resultado = numero1 - numero2;
+			
+			lblResultado.setText(String.format("Resultado: %.2f", resultado));
+		} catch (NumberFormatException e) {
+			lblResultado.setText("Digite Números Válidos");
+		}
+	}
+	
+	@FXML
+	private void onMultiplicar() {
+		try {
+			double numero1 = Double.parseDouble(txfNumero1.getText());
+			double numero2 = Double.parseDouble(txfNumero2.getText());
+			double resultado = numero1 * numero2;
+			
+			lblResultado.setText(String.format("Resultado: %.2f", resultado));
+		} catch (NumberFormatException e) {
+			lblResultado.setText("Digite Números Válidos");
+		}
+	}
+	
+	@FXML
+	private void onDividir() {
+		try {
+			double numero1 = Double.parseDouble(txfNumero1.getText());
+			double numero2 = Double.parseDouble(txfNumero2.getText());
+			
+			if (numero2 == 0) {
+				lblResultado.setText("Impossível Dividir por Zero");
+				return;
+			}
+			double resultado = numero1 / numero2;
+			
+			lblResultado.setText(String.format("Resultado: %.2f", resultado));
 		} catch (NumberFormatException e) {
 			lblResultado.setText("Digite Números Válidos");
 		}
